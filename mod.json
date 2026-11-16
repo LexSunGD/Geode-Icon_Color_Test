@@ -10,8 +10,33 @@
 	"version": "1.0.0",
 	"name": "Icon Color Test",
 	"developer": "LexSunGD",
-	"description": "description.",
+	"description": "Cambia dinámicamente los colores del icono usando los colores del nivel.",
 	"repository": "github.com",
 	"tags": [],
-	"settings": {}
+	"settings": {
+		"enable-mod": {
+			"type": "bool",
+			"name": "Enable Mod",
+			"description": "Activa o desactiva el mod.",
+			"default": true
+		},
+		"combine-color": {
+			"type": "bool",
+			"name": "Combine Color",
+			"description": "Combina tus colores con los del nivel. Si se desactiva, usa los colores exactos del nivel.",
+			"default": true
+		},
+		"flip-color": {
+			"type": "bool",
+			"name": "Flip Color",
+			"description": "Invierte la asignación: BG pasa al Color 2 y G pasa al Color 1.",
+			"default": false
+		},
+		"invert-color": {
+			"type": "bool",
+			"name": "Invert Color",
+			"description": "Invierte los colores finales (negativo RGB) de todos los iconos del jugador.",
+			"default": false
+		}
+	}
 }
