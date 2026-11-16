@@ -1,0 +1,17 @@
+{
+	"geode": "6.0.0-alpha.2",
+	"gd": {
+		"win": "2.2091",
+		"android": "2.2091",
+		"mac": "2.2091",
+		"ios": "2.2091"
+	},
+	"id": "lexsungd.icon_color_test",
+	"version": "1.0.0",
+	"name": "Icon Color Test",
+	"developer": "LexSunGD",
+	"description": "description.",
+	"repository": "github.com",
+	"tags": [],
+	"settings": {}
+}
