@@ -10,32 +10,47 @@
 	"version": "1.0.0",
 	"name": "Icon Color Test",
 	"developer": "LexSunGD",
-	"description": "Cambia dinámicamente los colores del icono usando los colores del nivel.",
+	"description": "Dynamically adapts your icon colors to the level's Background (BG) and Ground (G) colors.",
 	"repository": "github.com",
 	"tags": [],
 	"settings": {
 		"enable-mod": {
 			"type": "bool",
 			"name": "Enable Mod",
-			"description": "Activa o desactiva el mod.",
+			"description": "Enables or disables the entire mod.",
 			"default": true
+		},
+		"color-1-copy": {
+			"type": "string",
+			"name": "Color 1 Copy",
+			"description": "Selects which level color channel to copy for Primary Color (Color 1).",
+			"default": "BG",
+			"one-of": ["None", "BG", "G"]
+		},
+		"color-2-copy": {
+			"type": "string",
+			"name": "Color 2 Copy",
+			"description": "Selects which level color channel to copy for Secondary Color (Color 2).",
+			"default": "G",
+			"one-of": ["None", "BG", "G"]
+		},
+		"glow-copy": {
+			"type": "string",
+			"name": "Glow Copy",
+			"description": "Selects which level color channel to copy for Glow (only applies if Glow is enabled).",
+			"default": "None",
+			"one-of": ["None", "BG", "G"]
 		},
 		"combine-color": {
 			"type": "bool",
 			"name": "Combine Color",
-			"description": "Combina tus colores con los del nivel. Si se desactiva, usa los colores exactos del nivel.",
+			"description": "Blends copied level colors with your original garage colors (ignored for channels set to None).",
 			"default": true
-		},
-		"flip-color": {
-			"type": "bool",
-			"name": "Flip Color",
-			"description": "Invierte la asignación: BG pasa al Color 2 y G pasa al Color 1.",
-			"default": false
 		},
 		"invert-color": {
 			"type": "bool",
 			"name": "Invert Color",
-			"description": "Invierte los colores finales (negativo RGB) de todos los iconos del jugador.",
+			"description": "Inverts the final RGB colors of all player icons (including channels set to None).",
 			"default": false
 		}
 	}
